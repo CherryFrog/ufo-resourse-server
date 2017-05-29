@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers\Admin\V1\ContentManagement\Categories;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
@@ -16,8 +14,11 @@ class IndexController extends Controller
         $this->template = 'admin.v1.content_management.categories.index.index';
     }
 
-    public function execute($limit = 0, $offset = 0)
+    public function execute(Request $request)
     {
+        // Выбрать 20 записией которые выводит
+        // Выбрать total которое вообще можно вывести
+
         // METHOD GET
         if (view()->exists($this->template)) {
 

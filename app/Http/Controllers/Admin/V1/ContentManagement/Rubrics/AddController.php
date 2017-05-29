@@ -13,20 +13,20 @@ class AddController extends Controller
 
     public function __construct()
     {
-        $this->template = 'admin.v1.content_management.rubrics.index.index';
+        $this->template = 'admin.v1.content_management.rubrics.add.index';
     }
 
     public function execute(Request $request)
     {
         // METHOD POST
-        if ($request->isMethod('post')) {
-
-        }
 
 
         // METHOD GET
-        if (view()->exists('admin.portfolio.add')) {
+        if (view()->exists($this->template)) {
 
+            return view($this->template, [
+                //
+            ]);
         }
     }
 }

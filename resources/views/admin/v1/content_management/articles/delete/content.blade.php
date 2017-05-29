@@ -1,0 +1,1 @@
+admin/v1/content_management/articles/delete/content.blade

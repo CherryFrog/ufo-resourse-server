@@ -9,8 +9,24 @@ use App\Http\Controllers\Controller;
 
 class EditController extends Controller
 {
-    public function execute()
-    {
+    private $template;
 
+    public function __construct()
+    {
+        $this->template = 'admin.v1.content_management.articles.edit.index';
+    }
+
+    public function execute(Request $request, $article_id)
+    {
+        // METHOD POST
+
+
+        // METHOD GET
+        if (view()->exists($this->template)) {
+
+            return view($this->template, [
+                //
+            ]);
+        }
     }
 }

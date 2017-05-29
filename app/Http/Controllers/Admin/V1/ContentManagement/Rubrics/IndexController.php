@@ -16,21 +16,15 @@ class IndexController extends Controller
 
     public function execute(Request $request)
     {
+        // Выбрать 20 записией которые выводит
+        // Выбрать total которое вообще можно вывести
 
-        // METHOD POST
-        if ($request->isMethod('post')) {
-
-            return response()->json([
-
-            ], 200);
-        }
 
         // METHOD GET
         if (view()->exists($this->template)) {
 
             return view($this->template, [
-                'limit' => $limit,
-                'offset' => $offset,
+                //
             ]);
         }
     }
