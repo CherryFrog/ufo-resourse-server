@@ -21,7 +21,7 @@ class IndexController extends Controller
         if ($request->isMethod('post')) {
 
             return response()->json([
-                
+
             ], 200);
         }
 
