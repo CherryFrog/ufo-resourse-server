@@ -22,7 +22,7 @@
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="rubric_name">Введите название:</label>
-                            <input type="text" name="rubric_name" class="form-control" id="rubric_name" placeholder="Новая рубрика">
+                            <input type="text" name="rubric_name" class="form-control" id="rubric_name" placeholder="Название рубрики">
                         </div>
                         <div class="text-right">
                             <button type="submit" class="btn btn-primary">Добавить</button>

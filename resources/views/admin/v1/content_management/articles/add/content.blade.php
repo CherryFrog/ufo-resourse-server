@@ -58,7 +58,7 @@
                         </div>
                         <div class="form-group">
                             <label for="article_name">Введите название:</label>
-                            <input type="text" name="article_name" class="form-control" id="article_name" placeholder="Новая статья">
+                            <input type="text" name="article_name" class="form-control" id="article_name" placeholder="Название статьи">
                         </div>
                         <div class="text-right">
                             <button type="submit" class="btn btn-primary">Добавить</button>

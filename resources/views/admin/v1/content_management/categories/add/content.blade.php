@@ -32,7 +32,7 @@
                         </div>
                         <div class="form-group">
                             <label for="category_name">Введите название:</label>
-                            <input type="text" name="category_name" class="form-control" id="category_name" placeholder="Новая категория">
+                            <input type="text" name="category_name" class="form-control" id="category_name" placeholder="Название категории">
                         </div>
                         <div class="text-right">
                             <button type="submit" class="btn btn-primary">Добавить</button>

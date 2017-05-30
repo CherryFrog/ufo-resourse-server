@@ -42,7 +42,7 @@
                         </div>
                         <div class="form-group">
                             <label for="sub_category_name">Введите название:</label>
-                            <input type="text" name="sub_category_name" class="form-control" id="sub_category_name" placeholder="Новая подкатегория">
+                            <input type="text" name="sub_category_name" class="form-control" id="sub_category_name" placeholder="Название подкатегории">
                         </div>
                         <div class="text-right">
                             <button type="submit" class="btn btn-primary">Добавить</button>
