@@ -10,10 +10,34 @@
     <link href="{{ asset('src/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('src/css/app.css') }}" rel="stylesheet" type="text/css">
     @yield('styles')
+    <style>
+        .pagination, .table, .pager {
+            margin: 0px;
+        }
+
+        .panel {
+            box-shadow: none;
+        }
+    </style>
 </head>
 <body>
-@include('admin.v1.partials.header')
+@include('admin.v1.partials.master.header')
 <div class="container">
+    <!-- navigation panel -->
+    <!--<div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="row">
+                    <div class="col-md-12">
+                        @include('admin.v1.partials.master.navigation')
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- end navigation panel -->
+
+
     @yield('content')
 </div>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"
