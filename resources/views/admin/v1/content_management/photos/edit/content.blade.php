@@ -54,14 +54,18 @@
                         </div>
                         <div class="form-group">
                             <label for="article_text">Введите текст:</label>
-                            <textarea class="form-control" name="article_text" id="article_text" rows="5" placeholder="Текст статьи"></textarea>
+                            <textarea class="form-control" name="article_text" id="article_text" rows="5" placeholder="Текст статьи">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deleniti dolorem exercitationem
+                                fugit illum odio quidem quisquam vero?
+                                Cupiditate deserunt iure laudantium libero molestiae molestias non porro quaerat quas rem?
+                            </textarea>
                         </div>
                         <div class="form-group">
                             <label for="article_name">Введите название:</label>
-                            <input type="text" name="article_name" class="form-control" id="article_name" placeholder="Название статьи">
+                            <input type="text" name="article_name" class="form-control" id="article_name" placeholder="Новое название статьи" value="Заголовк статьи 1">
                         </div>
                         <div class="text-right">
-                            <button type="submit" class="btn btn-primary">Подтвердить добавление</button>
+                            <button type="submit" class="btn btn-primary">Подтвердить редактирование</button>
                         </div>
                     </form>
                 </div>

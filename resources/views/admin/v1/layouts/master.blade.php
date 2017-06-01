@@ -16,6 +16,11 @@
         .panel, .well {
             box-shadow: none;
         }
+
+        code {
+            background: #dddddd;
+            color: #333;
+        }
     </style>
 </head>
 <body>

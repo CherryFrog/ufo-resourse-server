@@ -35,7 +35,7 @@
                             <input type="text" name="category_name" class="form-control" id="category_name" placeholder="Название категории">
                         </div>
                         <div class="text-right">
-                            <button type="submit" class="btn btn-primary">Добавить</button>
+                            <button type="submit" class="btn btn-primary">Подтвердить добавление</button>
                         </div>
                     </form>
                 </div>

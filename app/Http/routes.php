@@ -151,6 +151,41 @@ Route::group(['prefix' => 'admin'], function () {
                 ]);
         });
 
+        // Страница спиcка фотографий
+        Route::get('/photos', [
+            'uses' => 'Admin\V1\ContentManagement\Photos\IndexController@execute',
+            'as' => 'admin.v1.content-management.photos.index-controller.execute',
+        ])
+            ->middleware([
+                'sanitaze.limit-offset'
+            ]);
+
+        Route::group(['prefix' => 'photo'], function () {
+            // Страница добавления фотографии
+            Route::match(['get', 'post'], '/add', [
+                'uses' => 'Admin\V1\ContentManagement\Photos\AddController@execute',
+                'as' => 'admin.v1.content-management.photos.add-controller.execute'
+            ]);
+
+            // Страница редактирования фотографии
+            Route::match(['get', 'post'], '/{photo_id}/edit', [
+                'uses' => 'Admin\V1\ContentManagement\Photos\EditController@execute',
+                'as' => 'admin.v1.content-management.photos.edit-controller-controller.execute'
+            ])
+                ->where([
+                    'photo_id' => '[0-9]+'
+                ]);
+
+            // Страница удаления фотографии
+            Route::match(['get', 'post'], '/{photo_id}/delete', [
+                'uses' => 'Admin\V1\ContentManagement\Photos\DeleteController@execute',
+                'as' => 'admin.v1.content-management.photos.delete-controller.execute'
+            ])
+                ->where([
+                    'photo_id' => '[0-9]+'
+                ]);
+        });
+
 
         // Получение категорий по рубрике
         // Получение подктегорий по рубрике

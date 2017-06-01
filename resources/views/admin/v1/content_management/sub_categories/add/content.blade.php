@@ -45,7 +45,7 @@
                             <input type="text" name="sub_category_name" class="form-control" id="sub_category_name" placeholder="Название подкатегории">
                         </div>
                         <div class="text-right">
-                            <button type="submit" class="btn btn-primary">Добавить</button>
+                            <button type="submit" class="btn btn-primary">Подтвердить добавление</button>
                         </div>
                     </form>
                 </div>

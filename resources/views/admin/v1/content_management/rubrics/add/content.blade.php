@@ -25,7 +25,7 @@
                             <input type="text" name="rubric_name" class="form-control" id="rubric_name" placeholder="Название рубрики">
                         </div>
                         <div class="text-right">
-                            <button type="submit" class="btn btn-primary">Добавить</button>
+                            <button type="submit" class="btn btn-primary">Подтвердить добавление</button>
                         </div>
                     </form>
                 </div>
