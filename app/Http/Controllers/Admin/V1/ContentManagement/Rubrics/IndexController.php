@@ -19,16 +19,6 @@ class IndexController extends Controller
         // Выбрать 20 записией которые выводит
         // Выбрать total которое вообще можно вывести
 
-        // rubric/1/articles
-        // category/1/articles
-        // sub-category/1/articles
-
-        // rubric/1/categories
-        
-        // rubric/1/sub-categories
-        // category/1/sub-categories
-
-
         // METHOD GET
         if (view()->exists($this->template)) {
 

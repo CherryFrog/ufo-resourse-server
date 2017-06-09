@@ -21,8 +21,8 @@
                     <form class="well">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <label for="rubric_id" class="control-label">Укажите рубирику:</label>
-                            <select class="form-control" name="rubric_id" id="rubric_id">
+                            <label for="rubric_id" class="control-label">Укажите рубирку:</label>
+                            <select class="form-control" id="rubric_id">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -32,7 +32,7 @@
                         </div>
                         <div class="form-group">
                             <label for="category_id" class="control-label">Указать категорию:</label>
-                            <select class="form-control" name="category_id" id="category_id">
+                            <select class="form-control" id="category_id">
                                 <option value="0" selected>Оставить поле пустым</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -43,7 +43,7 @@
                         </div>
                         <div class="form-group">
                             <label for="sub_category_id" class="control-label">Указать подкатегорию:</label>
-                            <select class="form-control" name="sub_category_id" id="sub_category_id">
+                            <select class="form-control" id="sub_category_id">
                                 <option value="0" selected>Оставить поле пустым</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -53,16 +53,25 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="article_text">Введите текст:</label>
-                            <textarea class="form-control" name="article_text" id="article_text" rows="5" placeholder="Текст статьи">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deleniti dolorem exercitationem
-                                fugit illum odio quidem quisquam vero?
-                                Cupiditate deserunt iure laudantium libero molestiae molestias non porro quaerat quas rem?
-                            </textarea>
+                            <label for="article_id" class="control-label">Укажите статью:</label>
+                            <select class="form-control" name="article_id" id="article_id">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label for="article_name">Введите название:</label>
-                            <input type="text" name="article_name" class="form-control" id="article_name" placeholder="Новое название статьи" value="Заголовк статьи 1">
+                            <label for="photo_alt">Введите описание для ботов поисковиков:</label>
+                            <input type="text" name="photo_alt" class="form-control" id="photo_alt" placeholder="Новое описание для ботов поисковиков">
+                        </div>
+                        <div class="form-group">
+                            <img src="" alt="" width="150" height="150">
+                        </div>
+                        <div class="form-group">
+                            <label for="article_name">Выбрать новую фотографию:</label>
+                            <input type="file" name="photo_file" class="form-control" id="photo_file" placeholder="Атрибут alt">
                         </div>
                         <div class="text-right">
                             <button type="submit" class="btn btn-primary">Подтвердить редактирование</button>

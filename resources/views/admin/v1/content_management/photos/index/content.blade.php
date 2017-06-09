@@ -52,7 +52,7 @@
                         @for($i = 1; $i < 21; $i++)
                             <tr>
                                 <td>{{ $i }}</td>
-                                <td><img alt="" src="..."></td>
+                                <td><img src="" alt="" width="150" height="150"></td>
                                 <td>Длина текста не должна быть меньше 3–4 слов и длиннее 250 символов.</td>
                                 <td class="text-center"><a href="#">Редактировать</a></td>
                                 <td class="text-center"><a href="#">Удалить</a></td>

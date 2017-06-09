@@ -64,10 +64,10 @@
                         </div>
                         <div class="form-group">
                             <label for="photo_alt">Введите описание для ботов поисковиков:</label>
-                            <input type="text" name="photo_alt" class="form-control" id="photo_alt" placeholder="Длина текста не должна быть меньше 3–4 слов и длиннее 250 символов.">
+                            <input type="text" name="photo_alt" class="form-control" id="photo_alt" placeholder="Описание для ботов поисковиков">
                         </div>
                         <div class="form-group">
-                            <label for="article_name">Загрузите фотографию:</label>
+                            <label for="article_name">Выбирите фотографию:</label>
                             <input type="file" name="photo_file" class="form-control" id="photo_file" placeholder="Атрибут alt">
                         </div>
                         <div class="text-right">
