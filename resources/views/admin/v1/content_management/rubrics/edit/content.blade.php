@@ -18,16 +18,31 @@
         <div class="panel">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <form class="well">
-                        {{ csrf_field() }}
+                    {!! Form::open([
+                        'url' => route('admin.v1.content-management.rubrics.edit-controller.execute', [
+                            'rubric_id' => 1
+                        ]),
+                        'class'=>'well',
+                        'method'=>'POST'
+                    ]) !!}
+
                         <div class="form-group">
-                            <label for="rubric_name">Введите название:</label>
-                            <input type="text" name="rubric_name" class="form-control" id="rubric_name" placeholder="Новое название рубрики" value="Рубрика 1">
+                            {{ Form::label('rubric_name', 'Введите название:') }}
+                            {{ Form::text('rubric_name', 'Рубрика 1', [
+                                'id' => 'rubric_name',
+                                'class' => 'form-control',
+                                'placeholder' => 'Новое название рубрики'
+                            ]) }}
                         </div>
+
                         <div class="text-right">
-                            <button type="submit" class="btn btn-primary">Подтвердить редактирование</button>
+                            {!! Form::button('Подтвердить редактирование', [
+                                'class' => 'btn btn-primary',
+                                'type'=>'submit'
+                            ]) !!}
                         </div>
-                    </form>
+
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>

@@ -18,23 +18,49 @@
         <div class="panel">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <form class="well">
-                        {{ csrf_field() }}
-                        <label for="rubric_id">Вы собираетесь удалить рубрику:</label>
+                    {!! Form::open([
+                        'url' => route('admin.v1.content-management.rubrics.delete-controller.execute', [
+                            'rubric_id' => 1
+                        ]),
+                        'class'=>'well',
+                        'method'=>'POST'
+                    ]) !!}
+
+                        <label>Вы собираетесь удалить рубрику:</label>
                         <p>Рубрика 1</p>
-                        <label>Вместе с ней (будут удалены|будет удалена<!--|будет удален-->):</label>
-                        <ul class="list-inline" style="margin-bottom: 20px">
-                            <li><a href="#" class="badge">1 категория</a></li>
-                            <li><a href="#" class="badge">1 подкатегория</a></li>
-                            <li><a href="#" class="badge">1 статья</a></li>
-                            <li><a href="#" class="badge">1 фотография</a></li>
-                            <!--<li><a href="#" class="badge">1 комментарий</a></li>-->
-                        </ul>
-                        <input type="hidden" name="rubric_id" value="{{ 1 }}" id="rubric_id"/>
+                        @if(true)
+                            <label>Вместе с ней (будут удалены|будет удалена<!--|будет удален-->):</label>
+                            <ul class="list-inline" style="margin-bottom: 20px">
+                                @if(true)
+                                    <li><a href="#" class="badge">1 категория</a></li>
+                                @endif
+
+                                @if(true)
+                                    <li><a href="#" class="badge">1 подкатегория</a></li>
+                                @endif
+
+                                @if(true)
+                                    <li><a href="#" class="badge">1 статья</a></li>
+                                @endif
+
+                                @if(true)
+                                    <li><a href="#" class="badge">1 фотография</a></li>
+                                @endif
+
+                                 <!--<li><a href="#" class="badge">1 комментарий</a></li>-->
+                            </ul>
+                        @endif
+
+                        {{ Form::hidden('rubric_id', 1) }}
+
                         <div class="text-right">
-                            <button type="submit" class="btn btn-primary">Подтвердить удаление</button>
+                            {!! Form::button('Подтвердить удаление', [
+                                'class' => 'btn btn-primary',
+                                'type'=>'submit'
+                            ]) !!}
                         </div>
-                    </form>
+
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>

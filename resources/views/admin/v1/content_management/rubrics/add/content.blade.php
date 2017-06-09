@@ -18,16 +18,29 @@
         <div class="panel">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <form class="well">
-                        {{ csrf_field() }}
+                    {!! Form::open([
+                        'url' => route('admin.v1.content-management.rubrics.add-controller.execute'),
+                        'class'=>'well',
+                        'method'=>'POST'
+                    ]) !!}
+
                         <div class="form-group">
-                            <label for="rubric_name">Введите название:</label>
-                            <input type="text" name="rubric_name" class="form-control" id="rubric_name" placeholder="Название рубрики">
+                            {{ Form::label('rubric_name', 'Введите название:') }}
+                            {{ Form::text('rubric_name', null, [
+                                'id' => 'rubric_name',
+                                'class' => 'form-control',
+                                'placeholder' => 'Название рубрики'
+                            ]) }}
                         </div>
+
                         <div class="text-right">
-                            <button type="submit" class="btn btn-primary">Подтвердить добавление</button>
+                            {!! Form::button('Подтвердить добавление', [
+                                'class' => 'btn btn-primary',
+                                'type'=>'submit'
+                            ]) !!}
                         </div>
-                    </form>
+
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>

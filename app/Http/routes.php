@@ -26,7 +26,7 @@ Route::group(['prefix' => 'admin'], function () {
             // Страница редактирования рубрики
             Route::match(['get', 'post'], '/{rubric_id}/edit', [
                 'uses' => 'Admin\V1\ContentManagement\Rubrics\EditController@execute',
-                'as' => 'admin.v1.content-management.rubrics.edit-controller-controller.execute'
+                'as' => 'admin.v1.content-management.rubrics.edit-controller.execute'
             ])
                 ->where([
                     'rubric_id' => '[0-9]+'

@@ -63,8 +63,9 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="photo_alt">Введите описание для ботов поисковиков:</label>
-                            <input type="text" name="photo_alt" class="form-control" id="photo_alt" placeholder="Новое описание для ботов поисковиков">
+                            <label for="photo_alt">Введите описание фотографии для ботов поисковиков:</label>
+                            <textarea class="form-control" name="photo_alt" id="photo_alt" rows="2"
+                                      placeholder="Новое описание фотографии для ботов поисковиков"></textarea>
                         </div>
                         <div class="form-group">
                             <img src="" alt="" width="150" height="150">

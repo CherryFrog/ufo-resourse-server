@@ -19,7 +19,9 @@
             <div class="row">
                 <div class="col-md-3 col-md-push-9">
                     <div class="text-right">
-                        <a href="#" class="btn btn-success">Добавить рубрику</a>
+                        <a href="{{ route('admin.v1.content-management.rubrics.add-controller.execute', [
+
+                        ]) }}" class="btn btn-success">Добавить рубрику</a>
                     </div>
                 </div>
                 <div class="col-md-9 col-md-pull-3">
@@ -56,12 +58,60 @@
                             <tr>
                                 <td>{{ $i }}</td>
                                 <td>Рубрика 1</td>
-                                <td class="text-center"><a href="#">2 категории</a></td>
-                                <td class="text-center"><a href="#">1 подкатегория</a></td>
-                                <td class="text-center"><a href="#">5 статей</a></td>
-                                <td class="text-center"><a href="#">Нет фотографий</a></td>
-                                <td class="text-center"><a href="#">Редактировать</a></td>
-                                <td class="text-center"><a href="#">Удалить</a></td>
+                                <td class="text-center">
+                                    @if(false)
+                                        <a href="{{ route('admin.v1.content-management.rubrics.nested.categories-controller.execute', [
+                                            'rubric_id' => 1
+                                        ]) }}">2 категории</a>
+                                    @else
+                                        <a href="{{ route('admin.v1.content-management.categories.add-controller.execute', [
+
+                                        ]) }}">Нет категорий</a>
+                                    @endif
+                                </td>
+                                <td class="text-center">
+                                    @if(false)
+                                        <a href="{{ route('admin.v1.content-management.rubrics.nested.sub-categories-controller.execute', [
+                                            'rubric_id' => 1
+                                        ]) }}">1 подкатегория</a>
+                                    @else
+                                        <a href="{{ route('admin.v1.content-management.sub-categories.add-controller.execute', [
+
+                                        ]) }}">Нет подкатегорий</a>
+                                    @endif
+                                </td>
+                                <td class="text-center">
+                                    @if(false)
+                                        <a href="{{ route('admin.v1.content-management.rubrics.nested.articles-controller.execute', [
+                                            'rubric_id' => 1
+                                        ]) }}">5 статей</a>
+                                    @else
+                                        <a href="{{ route('admin.v1.content-management.articles.add-controller.execute', [
+
+                                        ]) }}">Нет статей</a>
+                                    @endif
+                                </td>
+                                <td class="text-center">
+                                    @if(false)
+                                        <a href="{{ route('admin.v1.content-management.rubrics.nested.photos-controller.execute', [
+                                            'rubric_id' => 1
+                                        ]) }}">3 фотографии</a>
+                                    @else
+                                        <a href="{{ route('admin.v1.content-management.photos.add-controller.execute', [
+
+                                        ]) }}">Нет фотографий</a>
+                                    @endif
+                                </td>
+                                <td class="text-center">
+                                    <a href="{{ route('admin.v1.content-management.rubrics.edit-controller.execute', [
+                                        'rubric_id' => 1
+                                    ]) }}">Редактировать</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="{{ route('admin.v1.content-management.rubrics.delete-controller.execute', [
+                                        'rubric_id' => 1
+                                    ]) }}">Удалить</a>
+                                </td>
                             </tr>
                         @endfor
                         </tbody>
