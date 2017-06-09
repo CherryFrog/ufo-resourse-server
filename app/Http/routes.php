@@ -110,7 +110,7 @@ Route::group(['prefix' => 'admin'], function () {
             // Страница редактирования категории
             Route::match(['get', 'post'], '/{category_id}/edit', [
                 'uses' => 'Admin\V1\ContentManagement\Categories\EditController@execute',
-                'as' => 'admin.v1.content-management.сategories.edit-controller.execute'
+                'as' => 'admin.v1.content-management.categories.edit-controller.execute'
             ])
                 ->where([
                     'category_id' => '[0-9]+'

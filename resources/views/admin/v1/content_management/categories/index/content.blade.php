@@ -19,7 +19,9 @@
             <div class="row">
                 <div class="col-md-3 col-md-push-9">
                     <div class="text-right">
-                        <a href="#" class="btn btn-success">Добавить категорию</a>
+                        <a href="{{ route('admin.v1.content-management.categories.add-controller.execute', [
+
+                        ]) }}" class="btn btn-success">Добавить категорию</a>
                     </div>
                 </div>
                 <div class="col-md-9 col-md-pull-3">
@@ -55,11 +57,48 @@
                             <tr>
                                 <td>{{ $i }}</td>
                                 <th>Категория {{ $i }}</th>
-                                <td class="text-center"><a href="#">1 подкатегория</a></td>
-                                <td class="text-center"><a href="#">5 статей</a></td>
-                                <td class="text-center"><a href="#">Нет фотографий</a></td>
-                                <td class="text-center"><a href="#">Редактировать</a></td>
-                                <td class="text-center"><a href="#">Удалить</a></td>
+                                <td class="text-center">
+                                    @if(true)
+                                        <a href="{{ route('admin.v1.content-management.categories.nested.sub-categories-controller.execute', [
+                                            'category_id' => 1
+                                        ]) }}">3 подкатегории</a>
+                                    @else
+                                        <a href="{{ route('admin.v1.content-management.sub-categories.add-controller.execute', [
+
+                                        ]) }}">Нет подкатегорий</a>
+                                    @endif
+                                </td>
+                                <td class="text-center">
+                                    @if(true)
+                                        <a href="{{ route('admin.v1.content-management.categories.nested.articles-controller.execute', [
+                                            'category_id' => 1
+                                        ]) }}">4 статьи</a>
+                                    @else
+                                        <a href="{{ route('admin.v1.content-management.articles.add-controller.execute', [
+
+                                        ]) }}">Нет статей</a>
+                                    @endif</td>
+                                <td class="text-center">
+                                    @if(true)
+                                        <a href="{{ route('admin.v1.content-management.categories.nested.photos-controller.execute', [
+                                            'category_id' => 1
+                                        ]) }}">1 фотография</a>
+                                    @else
+                                        <a href="{{ route('admin.v1.content-management.photos.add-controller.execute', [
+
+                                        ]) }}">Нет фотографий</a>
+                                    @endif</td>
+                                </td>
+                                <td class="text-center">
+                                    <a href="{{ route('admin.v1.content-management.categories.edit-controller.execute', [
+                                        'category_id' => 1
+                                    ]) }}">Редактировать</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="{{ route('admin.v1.content-management.categories.delete-controller.execute', [
+                                        'category_id' => 1
+                                    ]) }}">Удалить</a>
+                                </td>
                             </tr>
                         @endfor
                         </tbody>

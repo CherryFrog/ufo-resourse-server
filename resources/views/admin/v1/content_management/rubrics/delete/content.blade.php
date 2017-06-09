@@ -32,19 +32,27 @@
                             <label>Вместе с ней (будут удалены|будет удалена<!--|будет удален-->):</label>
                             <ul class="list-inline" style="margin-bottom: 20px">
                                 @if(true)
-                                    <li><a href="#" class="badge">1 категория</a></li>
+                                    <li><a href="{{ route('admin.v1.content-management.rubrics.nested.categories-controller.execute', [
+                                        'rubric_id' => 1
+                                    ]) }}" class="badge" target="_blank">1 категория</a></li>
                                 @endif
 
                                 @if(true)
-                                    <li><a href="#" class="badge">1 подкатегория</a></li>
+                                    <li><a href="{{ route('admin.v1.content-management.rubrics.nested.sub-categories-controller.execute', [
+                                        'rubric_id' => 1
+                                    ]) }}" class="badge" target="_blank">1 подкатегория</a></li>
                                 @endif
 
                                 @if(true)
-                                    <li><a href="#" class="badge">1 статья</a></li>
+                                    <li><a href="{{ route('admin.v1.content-management.rubrics.nested.articles-controller.execute', [
+                                        'rubric_id' => 1
+                                    ]) }}" class="badge" target="_blank">1 статья</a></li>
                                 @endif
 
                                 @if(true)
-                                    <li><a href="#" class="badge">1 фотография</a></li>
+                                    <li><a href="{{ route('admin.v1.content-management.rubrics.nested.photos-controller.execute', [
+                                        'rubric_id' => 1
+                                    ]) }}" class="badge" target="_blank">1 фотография</a></li>
                                 @endif
 
                                  <!--<li><a href="#" class="badge">1 комментарий</a></li>-->
