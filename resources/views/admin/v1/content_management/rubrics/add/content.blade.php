@@ -25,7 +25,9 @@
                     ]) !!}
 
                         <div class="form-group">
-                            {{ Form::label('rubric_name', 'Введите название:') }}
+                            {{ Form::label('rubric_name', 'Введите название:', [
+                                'class' => 'control-label'
+                            ]) }}
                             {{ Form::text('rubric_name', null, [
                                 'id' => 'rubric_name',
                                 'class' => 'form-control',

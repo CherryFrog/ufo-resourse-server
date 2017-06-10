@@ -25,7 +25,9 @@
                     ]) !!}
 
                         <div class="form-group">
-                            {{ Form::label('rubric_id', 'Укажите рубрику:') }}
+                            {{ Form::label('rubric_id', 'Укажите рубрику:', [
+                                'class' => 'control-label'
+                            ]) }}
                             {{ Form::select('rubric_id', [
                                 '1' => 'Рубрика 1',
                                 '2' => 'Рубрика 2',
@@ -38,7 +40,9 @@
                         </div>
 
                         <div class="form-group">
-                            {{ Form::label('category_name', 'Введите название:') }}
+                            {{ Form::label('category_name', 'Введите название:', [
+                                'class' => 'control-label'
+                            ]) }}
                             {{ Form::text('category_name', null, [
                                 'id' => 'category_name',
                                 'class' => 'form-control',

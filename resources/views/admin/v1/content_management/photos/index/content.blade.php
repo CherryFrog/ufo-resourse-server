@@ -41,12 +41,12 @@
                 <div class="col-md-12">
                     <table class="table table-bordered">
                         <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>ФОТОГРАФИЯ</th>
-                            <th class="text-center">ОПИСАНИЕ ДЛЯ БОТОВ ПОИСКОВИКОВ</th>
-                            <th colspan="2" class="text-center">ДЕЙСТВИЕ</th>
-                        </tr>
+                            <tr>
+                                <th>ID</th>
+                                <th>ФОТОГРАФИЯ</th>
+                                <th class="text-center">ОПИСАНИЕ ДЛЯ БОТОВ ПОИСКОВИКОВ</th>
+                                <th colspan="2" class="text-center">ДЕЙСТВИЕ</th>
+                            </tr>
                         </thead>
                         <tbody>
                         @for($i = 1; $i < 21; $i++)

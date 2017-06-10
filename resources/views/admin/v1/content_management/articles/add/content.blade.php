@@ -18,52 +18,93 @@
         <div class="panel">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <form class="well">
-                        {{ csrf_field() }}
+                    {!! Form::open([
+                        'url' => route('admin.v1.content-management.articles.add-controller.execute'),
+                        'class'=>'well',
+                        'method'=>'POST'
+                    ]) !!}
+
                         <div class="form-group">
-                            <label for="rubric_id" class="control-label">Укажите рубирику:</label>
-                            <select class="form-control" name="rubric_id" id="rubric_id">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
+                            {{ Form::label('rubric_id', 'Укажите рубирику:', [
+                                'class' => 'control-label'
+                            ]) }}
+                            {{ Form::select('rubric_id', [
+                                '1' => 'Рубрика 1',
+                                '2' => 'Рубрика 2',
+                                '3' => 'Рубрика 3',
+                                '4' => 'Рубрика 4',
+                                '5' => 'Рубрика 5'
+                            ], null, [
+                                'class' => 'form-control',
+                                'id' => 'rubric_id'
+                            ]) }}
                         </div>
+
                         <div class="form-group">
-                            <label for="category_id" class="control-label">Указать категорию:</label>
-                            <select class="form-control" name="category_id" id="category_id">
-                                <option value="0" selected>Оставить поле пустым</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
+                            {{ Form::label('category_id', 'Указать категорию:', [
+                                'class' => 'control-label'
+                            ]) }}
+                            {{ Form::select('category_id', [
+                                '0' => 'Оставить поле пустым',
+                                '1' => 'Категория 1',
+                                '2' => 'Категория 2',
+                                '3' => 'Категория 3',
+                                '4' => 'Категория 4',
+                                '5' => 'Категория 5'
+                            ], null, [
+                                'class' => 'form-control',
+                                'id' => 'category_id'
+                            ]) }}
                         </div>
+
                         <div class="form-group">
-                            <label for="sub_category_id" class="control-label">Указать подкатегорию:</label>
-                            <select class="form-control" name="sub_category_id" id="sub_category_id">
-                                <option value="0" selected>Оставить поле пустым</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
+                            {{ Form::label('sub_category_id', 'Указать подкатегорию:', [
+                                'class' => 'control-label'
+                            ]) }}
+                            {{ Form::select('sub_category_id', [
+                                '0' => 'Оставить поле пустым',
+                                '1' => 'Подкатегория 1',
+                                '2' => 'Подкатегория 2',
+                                '3' => 'Подкатегория 3',
+                                '4' => 'Подкатегория 4',
+                                '5' => 'Подкатегория 5'
+                            ], null, [
+                                'class' => 'form-control',
+                                'id' => 'category_id'
+                            ]) }}
                         </div>
+
                         <div class="form-group">
-                            <label for="article_text">Введите текст:</label>
-                            <textarea class="form-control" name="article_text" id="article_text" rows="5" placeholder="Текст статьи"></textarea>
+                            {{ Form::label('article_text', 'Введите текст:', [
+                                'class' => 'control-label'
+                            ]) }}
+                            {{ Form::textarea('article_text', null, [
+                                'rows' => 5,
+                                'placeholder' => 'Текст статьи',
+                                'class' => 'form-control',
+                                'id' => 'article_text'
+                            ]) }}
                         </div>
+
                         <div class="form-group">
-                            <label for="article_name">Введите название:</label>
-                            <input type="text" name="article_name" class="form-control" id="article_name" placeholder="Название статьи">
+                            {{ Form::label('article_name', 'Введите название:', [
+                                'class' => 'control-label'
+                            ]) }}
+                            {{ Form::text('article_name', null, [
+                                 'class' => 'form-control',
+                                 'id' => 'article_name',
+                                 'placeholder' => 'Название статьи'
+                            ]) }}
                         </div>
+
                         <div class="text-right">
-                            <button type="submit" class="btn btn-primary">Подтвердить добавление</button>
+                            {!! Form::button('Подтвердить добавление', [
+                                'class' => 'btn btn-primary',
+                                'type'=>'submit'
+                            ]) !!}
                         </div>
-                    </form>
+
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>

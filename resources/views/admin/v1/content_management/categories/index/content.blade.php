@@ -43,20 +43,20 @@
                 <div class="col-md-12">
                     <table class="table table-bordered">
                         <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>КАТЕГОРИЯ</th>
-                            <th class="text-center">ПОДКАТЕГОРИИ</th>
-                            <th class="text-center">СТАТЬИ</th>
-                            <th class="text-center">ФОТОГРАФИИ</th>
-                            <th colspan="2" class="text-center">ДЕЙСТВИЕ</th>
-                        </tr>
+                            <tr>
+                                <th>ID</th>
+                                <th>КАТЕГОРИЯ</th>
+                                <th class="text-center">ПОДКАТЕГОРИИ</th>
+                                <th class="text-center">СТАТЬИ</th>
+                                <th class="text-center">ФОТОГРАФИИ</th>
+                                <th colspan="2" class="text-center">ДЕЙСТВИЕ</th>
+                            </tr>
                         </thead>
                         <tbody>
                         @for($i = 1; $i < 21; $i++)
                             <tr>
                                 <td>{{ $i }}</td>
-                                <th>Категория {{ $i }}</th>
+                                <td>Категория {{ $i }}</td>
                                 <td class="text-center">
                                     @if(true)
                                         <a href="{{ route('admin.v1.content-management.categories.nested.sub-categories-controller.execute', [

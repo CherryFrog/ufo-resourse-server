@@ -43,15 +43,15 @@
                 <div class="col-md-12">
                     <table class="table table-bordered">
                         <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>РУБРИКА</th>
-                            <th class="text-center">КАТЕГОРИИ</th>
-                            <th class="text-center">ПОДКАТЕГОРИИ</th>
-                            <th class="text-center">СТАТЬИ</th>
-                            <th class="text-center">ФОТОГРАФИИ</th>
-                            <th colspan="2" class="text-center">ДЕЙСТВИЕ</th>
-                        </tr>
+                            <tr>
+                                <th>ID</th>
+                                <th>РУБРИКА</th>
+                                <th class="text-center">КАТЕГОРИИ</th>
+                                <th class="text-center">ПОДКАТЕГОРИИ</th>
+                                <th class="text-center">СТАТЬИ</th>
+                                <th class="text-center">ФОТОГРАФИИ</th>
+                                <th colspan="2" class="text-center">ДЕЙСТВИЕ</th>
+                            </tr>
                         </thead>
                         <tbody>
                         @for($i = 1; $i < 21; $i++)

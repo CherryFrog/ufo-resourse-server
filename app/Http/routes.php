@@ -182,7 +182,7 @@ Route::group(['prefix' => 'admin'], function () {
             // Страница редактирования подкатегории
             Route::match(['get', 'post'], '/{sub_category_id}/edit', [
                 'uses' => 'Admin\V1\ContentManagement\SubCategories\EditController@execute',
-                'as' => 'admin.v1.content-management.sub-сategories.edit-controller.execute'
+                'as' => 'admin.v1.content-management.sub-categories.edit-controller.execute'
             ])
                 ->where([
                     'sub_category_id' => '[0-9]+'
